@@ -14,23 +14,32 @@ const countDOM = document.querySelector('.count span')
 
 // fetch functionality to only return data for the successful case
 const fetchAdvice = async () => {
-  result.innerHTML = `<div class="loading">Loading ...</div>`
+  resultDOM.innerHTML = `<div class="loading">Loading ...</div>`
   try {
     const response = await fetch(url)
     const data = await response.json()
     return data
   } catch (error) {
-    result.innerHTML = `<div class="error">Couldn't fetch data!</div>`
+    resultDOM.innerHTML = `<div class="error">Couldn't fetch data!</div>`
   }
 }
 
+const renderUI = advice => {
+  console.log(advice)
+  resultDOM.innerHTML = `<p>${advice.slip.advice}</p>`
+  countDOM.textContent = count + 1
+  count = count + 1
+}
 /** --- Let's start the App with a start function --- */
 const start = async () => {
-  console.log("Let's fetch data")
+  console.log('button clicked!!')
+  //   console.log("Let's fetch data")
   const data = await fetchAdvice()
-  console.log(data)
-
-  console.log("let's render data in the UI")
+  //   console.log(data)
+  //   console.log("let's render data in the UI")
+  renderUI(data)
 }
 
-start()
+btnDOM.addEventListener('click', () => {
+  start()
+})
