@@ -6,28 +6,38 @@
 
 :root {
   --primary-color: rgb(68, 68, 168);
-  --secondary-color: rgb(164, 107, 0);
+  --secondary-color: rgb(184, 255, 158);
   --color-white: #fff;
   --color-blue: #17179b;
+  --color-black: #000;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva,
     Verdana, sans-serif;
+}
+
+body {
+  background-image: url('./bg-img.jpeg');
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .container {
   margin: 2rem auto;
   max-width: 1170px;
   padding: 0 15px;
+  text-align: center;
 }
 
 .btn {
   border: none;
-  padding: 0.5rem 1rem;
+  padding: 0.75rem 1.25rem;
   cursor: pointer;
   background-color: var(--primary-color);
   color: var(--color-white);
   text-transform: capitalize;
   letter-spacing: 2px;
   transition: all 0.25s;
+  font-size: 1.25rem;
+  display: inline-block;
 }
 
 .btn:hover {
@@ -36,14 +46,30 @@
 
 .result {
   margin: 2rem auto;
-  font-size: 3rem;
+  font-size: 1.5rem;
+  color: var(--secondary-color);
+  background-color: black;
+  opacity: 0.7;
+  padding: 1rem;
+  font-weight: 100;
+  max-width: 600px;
+  line-height: 1.5;
+  text-transform: uppercase;
 }
 
 .count {
   font-weight: 100;
-  text-transform: uppercase;
+  text-transform: capitalize;
+  font-size: 1rem;
+  color: var(--color-white);
+  display: inline-flex;
+  align-items: center;
+  opacity: 0.75;
+  padding: 0.75rem 1rem;
 }
 
 .count span {
-  font-weight: 600;
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: var(--color-white);
 }

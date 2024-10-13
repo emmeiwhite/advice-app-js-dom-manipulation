@@ -2,7 +2,7 @@ console.log('I am JavaScript, I make sure your app is interactive')
 
 // Application data or state
 
-let count = 0
+let count = 1
 let result = ''
 
 let url = 'https://api.adviceslip.com/advice'
